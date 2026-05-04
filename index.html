@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>Weather App</h1>
+      <form id="city-form" class="search" autocomplete="off">
+        <input id="city-input" type="text" placeholder="Search city (e.g. New York)" required />
+        <button type="submit">Search</button>
+      </form>
+      <button id="location-btn" class="location-btn" type="button">Use My Location</button>
+
+      <section id="status" class="status" aria-live="polite"></section>
+
+      <section id="current-weather" class="card hidden">
+        <h2 id="location-name"></h2>
+        <p><strong>Temperature:</strong> <span id="temp"></span>°C</p>
+        <p><strong>Feels Like:</strong> <span id="feels-like"></span>°C</p>
+        <p><strong>Condition:</strong> <span id="condition"></span></p>
+        <p><strong>Humidity:</strong> <span id="humidity"></span>%</p>
+        <p><strong>Wind:</strong> <span id="wind"></span> km/h</p>
+      </section>
+
+      <section id="forecast" class="card hidden">
+        <h2>5-Day Forecast</h2>
+        <div id="forecast-list" class="forecast-list"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
